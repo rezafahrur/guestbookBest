@@ -19,6 +19,22 @@ Route::get('/guest', function () {
     return view('guestbook');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/tables', function () {
+    return view('tables');
+});
+
+Route::get('/game', function () {
+    return view('gameCounter');
+});
+
+Route::get('/counter', function () {
+    return view('counter');
+});
+
 Route::get('/gallery', function () {
     return view('gallery');
 });

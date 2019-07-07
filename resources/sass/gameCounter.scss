@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext');
+
+@import 'loader';
+
+* {
+	touch-action: manipulation;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font: 10rem/1.2 'Open Sans', serif;
+	text-transform: uppercase;
+	text-align: center;
+	background: #1e272e;
+	//background: linear-gradient(to right, #e9e4f0, #d3cce3);
+	color: #fefefe;
+}
+
+#wrapper {
+	transform: translate(-50%, -50%);
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+#info,
+#counter,
+#button,
+#reset {
+	margin: 0 auto 2rem;
+}
+
+#info {
+	font-size: 1.8rem;
+}
+
+#counter {
+	margin-bottom: 3rem;
+}
+
+#button {
+	width: 4.6em;
+	height: 4.6em;
+	margin-bottom: 5.5rem;
+	border-radius: 50%;
+	font-size: 4rem;
+	line-height: 1.125;
+	background: #7395ac;
+	color: #d3cce3;
+//	cursor: pointer;
+	box-shadow: none;
+	transition: box-shadow .1s linear;
+}
+
+#button:hover{
+	box-shadow:
+		0 0 0 .1em #d3cce3,
+		0 0 .1px .15em #415563;
+}
+
+
+::-moz-selection {
+	background: transparent;
+}
+
+::selection {
+	background: transparent;
+}

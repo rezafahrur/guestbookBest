@@ -53,7 +53,7 @@ class GuestController extends Controller
     public function showWelcome(Guest $guest)
     {
         $guestCollection = Guest::where('is_visit', 0)
-                                    ->orderBy('created_at')
+                                    ->orderBy('nama')
                                     ->get();
         return view('welcome', [
             'guestCollection' => $guestCollection

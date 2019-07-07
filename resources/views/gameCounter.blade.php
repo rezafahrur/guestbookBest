@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Chrome for Android theme color -->
+    <meta name="theme-color" content="#1e272e">
     <!-- manifest -->
 <link rel="manifest" href="manifest2.json">
    
@@ -24,23 +27,28 @@
 <meta name="msapplication-TileImage" content="{{ asset("/images/bms_icon_256.png") }}">
     <link rel="icon" type="image/png" sizes="256x256" href="{{ asset("/images/bms_icon_256.png") }}">
     <title>BeSt 7th Anniversary</title>
-    <link rel="stylesheet" href="{{ asset('css/loginTamu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/gameCounter.css') }}">
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-          <div class="header">
-            <h2 class="animation a1">Halo Lagi</h2>
-            <h4 class="animation a2">Silahkan Login untuk Berinteraksi dengan Kami selama berjalannya acara ini</h4>
-          </div>
-          <div class="form">
-            <input type="email" class="form-field animation a3" placeholder="Nomor Telepon">
-            <input type="password" class="form-field animation a4" placeholder="Password">
-            <button class="animation a6">LOGIN</button>
-          </div>
+        <div id="wrapperLoadGame" class="wrapperLoad">
+				<div class="left slideLeft"></div>
+				<div class="spin">
+				  <div class="load growUp"></div>
+				</div>
+				<div class="right slideRight"></div>
+		</div>
+    <div id="wrapper">
+        <div id="info">
+            <div class="title">BeSt 7th Anniversary
+            <span>Games</span>
         </div>
-        <div class="right"></div>
-      </div>
-      
+        </div>
+        <div id="counter">0</div>
+        <div id="button"></div>
+    </div>
+        
+        
+    
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

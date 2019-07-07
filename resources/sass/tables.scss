@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext');
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+@import '~bootstrap-select/dist/css/bootstrap-select.min.css';
+@import 'loader';
+
+
+* {
+	touch-action: manipulation;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font: 10rem/1.2 'Open Sans', serif;
+	text-transform: uppercase;
+	text-align: center;
+	background: #1e272e;
+	color: #fefefe;
+}
+
+.tables {
+    margin-top: 50%;
+    width: 60%;
+    margin-left: 20%;
+}

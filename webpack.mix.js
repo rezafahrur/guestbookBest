@@ -12,7 +12,11 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .less('resources/sass/counter.less', 'public/css')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/form.scss', 'public/css')
     .sass('resources/sass/loginTamu.scss', 'public/css')
+    .sass('resources/sass/gameCounter.scss', 'public/css')
+    .sass('resources/sass/home.scss', 'public/css')
+    .sass('resources/sass/tables.scss', 'public/css')
     .sass('resources/sass/gallery.scss', 'public/css');
