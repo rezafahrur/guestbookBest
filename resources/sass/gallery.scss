@@ -1,5 +1,6 @@
 html {
     box-sizing:border-box;
+    text-decoration: none;
 }
 body {
 	font-family: 'Nunito', sans-serif;
@@ -53,15 +54,15 @@ a[href^="http:"]{
 
 .coffe {
   /*background-image:url(https://cdn1.iconfinder.com/data/icons/adobe-acrobat-pdf/154/adobe-acrobat-pdf-file-512.png); */
-  background-image: url(https://cdn1.iconfinder.com/data/icons/appliances-14/64/coffe-machine-appliances-coffee-512.png);
+  background-image: url("/images/coffee-machine.png");
 }
 
 .jpg {
-  background-image:url(http://icons.iconarchive.com/icons/pelfusion/flat-file-type/512/jpg-icon.png);
+  background-image:url("/images/jpg-icon.png");
 }
 
-.zip {
-  background-image:url(http://icons.iconarchive.com/icons/graphicloads/filetype/256/zip-icon.png);
+.back {
+  background-image:url("/images/back-arrow.png");
 }
 
 .downloads {

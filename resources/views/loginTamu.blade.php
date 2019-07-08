@@ -24,20 +24,24 @@
 <meta name="msapplication-TileImage" content="{{ asset("/images/bms_icon_256.png") }}">
     <link rel="icon" type="image/png" sizes="256x256" href="{{ asset("/images/bms_icon_256.png") }}">
     <title>BeSt 7th Anniversary</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/loginTamu.css') }}">
 </head>
 <body>
     <div class="container">
         <div class="left">
           <div class="header">
-            <h2 class="animation a1">Halo Lagi</h2>
-            <h4 class="animation a2">Silahkan Login untuk Berinteraksi dengan Kami selama berjalannya acara ini</h4>
+            <h2 class="animation a1">Halo Lagi...  <span class="animation a3"> <i class="far fa-smile"></i></span> </h2>
+            <h4 class="animation a5">Silahkan Login untuk Berinteraksi dengan Kami selama berjalannya acara ini</h4>
           </div>
+          <form action="#" method="post">
+              @csrf
           <div class="form">
-            <input type="email" class="form-field animation a3" placeholder="Nomor Telepon">
-            <input type="password" class="form-field animation a4" placeholder="Password">
-            <button class="animation a6">LOGIN</button>
+            <input type="number" class="form-field animation a3" placeholder="Masukkan Nomor HP Anda" required>
+            <button type="submit" class="animation a6">LOGIN</button>
           </div>
+        </form>
         </div>
         <div class="right"></div>
       </div>

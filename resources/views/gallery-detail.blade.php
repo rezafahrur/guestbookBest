@@ -39,18 +39,17 @@
 				<div class="down slideDown"></div>
 		</div>
   
-  <h1>BeSt Photos <br> in <br> BeSt 7th Anniversary</h1>
+  <h1>BeSt Photo <br> in <br> BeSt 7th Anniversary</h1>
 		<p class="center">"BeSt Digital on Progress"</p> 
     
 	<div class="gallery">	
-		<a href="gallerydetail">
-		<img src="{{ asset('images/tables/1/book-lamps.jpg')}}" type="thumbnail" alt=""></a>
-		<a href="gallerydetail">
-		<img src="{{ asset('images/tables/1/ceiling-lamp.jpg')}}" type="thumbnail" alt=""></a>
-		<a href="gallerydetail">
-		<img src="{{ asset('images/tables/1/cat.jpg')}}" type="thumbnail" alt=""></a>
-		<a href="gallerydetail">
-		<img src="{{ asset('images/tables/1/cat2.jpg')}}" type="thumbnail" alt=""></a>
+		<img src="{{ asset('images/tables/1/book-lamps.jpg')}}" type="thumbnail" alt="">
+		<h2>Download Photos</h2>
+		<ul>
+			<li><a class="downloads coffe" href="#">Print in Coffe Printer</a></li>
+            <li><a class="downloads jpg" href="#">Download as JPG</a></li>
+			<li><a class="downloads back" href="home">Back</a></li> 
+		</ul>
 	</div>
 	<script src="{{asset('js/app.js')}}"></script>
 </body>

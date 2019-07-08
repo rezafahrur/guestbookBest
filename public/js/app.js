@@ -40056,6 +40056,8 @@ __webpack_require__(/*! ./components/counter */ "./resources/js/components/count
 
 __webpack_require__(/*! ./components/loader */ "./resources/js/components/loader.js");
 
+__webpack_require__(/*! ./components/welcome */ "./resources/js/components/welcome.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -40571,6 +40573,21 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     });
   });
 });
+
+/***/ }),
+
+/***/ "./resources/js/components/welcome.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/welcome.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+try {
+  $('.selectpicker').selectpicker({
+    noneResultsText: 'Maaf Nama atau Nomor HP Anda Tidak Ditemukan'
+  });
+} catch (_unused) {}
 
 /***/ }),
 

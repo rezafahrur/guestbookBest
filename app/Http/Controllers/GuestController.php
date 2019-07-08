@@ -17,6 +17,11 @@ class GuestController extends Controller
         return view('formDaftarTamu');
     }
 
+    public function unexpectedIndex()
+    {
+        return view('unexpectedGuest');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -36,12 +41,23 @@ class GuestController extends Controller
     public function store(Request $request)
     {
         $guest = new Guest;
-        $guest->nama=$request->nama;
+        $guest->nama= strtolower($request->nama);
         $guest->hp=$request->hp;
         $guest->is_visit= false;
         $guest->save();
 
         return redirect()->route('daftarTamu')->with('sukses', 'sukses');
+    }
+
+    public function unexpectedStore(Request $request)
+    {
+        $guest = new Guest;
+        $guest->nama= strtolower($request->nama);
+        $guest->hp=$request->hp;
+        $guest->is_visit= true;
+        $guest->save();
+
+        return redirect()->route('unexpected')->with('sukses', 'sukses');
     }
 
     /**
@@ -64,7 +80,7 @@ class GuestController extends Controller
     {
         $visitor = Guest::find($guest->id);
         $explode= explode(' ', $visitor->nama);
-        $namaTamu= $explode[0];
+        $namaTamu= ucwords($explode[0]);
         return view('guestbook', [
             'visitor' => $visitor,
             'namaTamu' => $namaTamu

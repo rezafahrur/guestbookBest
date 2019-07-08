@@ -49,7 +49,7 @@
                                 <br>
                                 <div class="floating-form">
                                     <div class="floating-label">
-                                        <input class="floating-input" name="hp" placeholder=" " value="{{$visitor->hp}}" autocorrect="off" required>
+                                        <input type="number" class="floating-input" name="hp" placeholder=" " value="{{$visitor->hp}}" autocorrect="off" required>
                                         <span class="highlight"></span>
                                         <label>Nomor HP dan WhatsApp Saya</label>
                                     </div>

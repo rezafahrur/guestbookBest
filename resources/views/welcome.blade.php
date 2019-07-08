@@ -42,9 +42,9 @@
 					<div class="floating-form fontSize">
 						<div class="floating-label">
 								<select id="id" name="id" class="form-control selectpicker" data-live-search="true" onchange='this.form.submit()' required autofocus>
-										<option disabled selected value="">PILIH NAMA ATAU NOMOR HP</option>
+										<option disabled selected value="">PILIH NAMA ATAU NOMOR HP DI SINI</option>
 										@foreach ($guestCollection as $guest)
-								<option value="{{$guest->id}}">{{$guest->nama}} - {{$guest->hp}}</option>    
+								<option value="{{$guest->id}}">{{ ucwords($guest->nama)}} - {{$guest->hp}}</option>    
 										@endforeach
 									</select>
 						</div>

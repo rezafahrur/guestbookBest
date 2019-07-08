@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{{ asset('css/form.css') }}">
 </head>
 <body>
-    <form name="login-form" class="login-form" action="daftarTamu" method="post" autocomplete="off" >
+    <form name="unexpected-form" class="login-form" action="unexpected" method="post" autocomplete="off" >
 		@csrf
 		<div class="header">
 		<h1>Input Data Tamu BeSt</h1>
