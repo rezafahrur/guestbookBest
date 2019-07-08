@@ -97,4 +97,33 @@ class GuestController extends Controller
         
     }
 
+    public function visited()
+    {
+        $visitedCollection = Guest::where('is_visit', 1)
+                                ->orderBy('nama')
+                                ->get();
+        return view('visited', [
+            'visitedCollection' => $visitedCollection
+            ]);
+    }
+
+    public function unvisited()
+    {
+        $unvisitedCollection = Guest::where('is_visit', 0)
+                                ->orderBy('nama')
+                                ->get();
+        return view('unvisited', [
+            'unvisitedCollection' => $unvisitedCollection
+            ]);
+    }
+
+    public function allGuest()
+    {
+        $guestCollection = Guest::get();
+
+        return view('allGuest', [
+            'guestCollection' => $guestCollection
+        ]);
+    }
+
 }

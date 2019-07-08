@@ -43,8 +43,15 @@ Route::get('/gallerydetail', function () {
     return view('gallery-detail');
 });
 
+Route::get('/visited', 'GuestController@visited')->name('visited');
+Route::get('/unvisited', 'GuestController@unvisited')->name('unvisited');
+
 Route::get('/daftarTamu', 'GuestController@index')->name('daftarTamu');
 Route::post('/daftarTamu', 'GuestController@store');
+
+Route::get('/all', 'GuestController@allGuest')->name('allGuest');
+
+
 
 Route::get('/unexpected', 'GuestController@unexpectedIndex')->name('unexpected');
 Route::post('/unexpected', 'GuestController@unexpectedStore');

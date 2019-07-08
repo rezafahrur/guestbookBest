@@ -48,7 +48,13 @@
     </form>
     <br><br><br><br><br><br>
     <center>
-      <button type="button" class="tabelButton" id="buttonLihat"> Lihat Tabel Tamu </button>
+            <a href="visited">
+                    <button type="button" class="tabelButton" id="buttonLihat"> Lihat Daftar Tamu Hadir </button></a>
+    </center>
+    <br><br><br>
+    <center>
+            <a href="unvisited">
+                    <button type="button" class="tabelButton" id="buttonLihat"> Lihat Daftar Tamu Belum Hadir </button></a>
     </center>
 	<script src="{{asset('js/app.js')}}"></script>
 	@if (Session::get('sukses') == true)

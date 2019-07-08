@@ -36,7 +36,7 @@
 		</div>
 	
 		<div class="content">
-		<input name="nama" type="text" class="input username" placeholder="Nama Tamu" required/>
+		<input name="nama" type="text" class="input username" placeholder="Nama Tamu" required autofocus/>
 		<div class="user-icon"></div>
 		<input name="hp" type="text" class="input password" placeholder="Nomor HP (Kalo Bisa No WA)" required/>
 		<div class="pass-icon"></div>		
@@ -48,7 +48,8 @@
     </form>
     <br><br><br><br><br><br>
     <center>
-      <button type="button" class="tabelButton" id="buttonLihat"> Lihat Tabel Tamu </button>
+		<a href="all">
+      <button type="button" class="tabelButton" id="buttonLihat"> Lihat Daftar Tamu </button></a>
     </center>
 	<script src="{{asset('js/app.js')}}"></script>
 	@if (Session::get('sukses') == true)

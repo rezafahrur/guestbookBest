@@ -19,4 +19,5 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/gameCounter.scss', 'public/css')
     .sass('resources/sass/home.scss', 'public/css')
     .sass('resources/sass/tables.scss', 'public/css')
+    .sass('resources/sass/visited.scss', 'public/css')
     .sass('resources/sass/gallery.scss', 'public/css');

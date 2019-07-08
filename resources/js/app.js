@@ -1,7 +1,13 @@
 require('./bootstrap');
 require('bootstrap-select/dist/js/bootstrap-select');
+require('datatables.net');
+require('datatables.net-responsive');
+require('datatables.net-bs4');
 require('./components/notify.min');
 require('./components/gameCounter');
 require('./components/counter');
 require('./components/loader');
 require('./components/welcome');
+require('./components/visited');
+require('./components/unvisited');
+require('./components/allGuest');
