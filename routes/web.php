@@ -19,16 +19,8 @@ Route::get('/guest', function () {
     return view('guestbook');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
-
 Route::get('/tables', function () {
     return view('tables');
-});
-
-Route::get('/game', function () {
-    return view('gameCounter');
 });
 
 Route::get('/counter', function () {
@@ -56,7 +48,11 @@ Route::get('/all', 'GuestController@allGuest')->name('allGuest');
 Route::get('/unexpected', 'GuestController@unexpectedIndex')->name('unexpected');
 Route::post('/unexpected', 'GuestController@unexpectedStore');
 
-Route::get('/login', function () {
-    return view('loginTamu');
-});
+Route::get('/login', 'AppController@login')->name('login');
+Route::post('/login', 'AppController@loginSubmit');
 
+Route::get('/home', 'AppController@home')->name('home');
+Route::get('/game', 'AppController@game')->name('game');
+
+Route::get('/displayScore', 'AppController@displayScore')->name('displayScore');
+Route::get('/score', 'AppController@score');

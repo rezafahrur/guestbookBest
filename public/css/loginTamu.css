@@ -35,11 +35,11 @@ body {
 .right {
   -webkit-box-flex: 1;
           flex: 1;
-  background-color: black;
+  background-color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-image: url(http://www.viktorvincej.com/wp-content/uploads/2017/04/online-marketing-conference-759x500.jpg);
-  background-size: cover;
+  background-image: url("/images/mitra-best.jpg");
+  background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
 }

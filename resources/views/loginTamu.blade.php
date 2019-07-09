@@ -35,10 +35,10 @@
             <h2 class="animation a1">Halo Lagi...  <span class="animation a3"> <i class="far fa-smile"></i></span> </h2>
             <h4 class="animation a5">Silahkan Login untuk Berinteraksi dengan Kami selama berjalannya acara ini</h4>
           </div>
-          <form action="#" method="post">
+          <form action="login" method="post">
               @csrf
           <div class="form">
-            <input type="number" class="form-field animation a3" placeholder="Masukkan Nomor HP Anda" required>
+            <input type="number" name="hp" class="form-field animation a3" placeholder="Masukkan Nomor HP Anda" required>
             <button type="submit" class="animation a6">LOGIN</button>
           </div>
         </form>

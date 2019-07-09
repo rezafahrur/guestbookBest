@@ -56921,6 +56921,8 @@ __webpack_require__(/*! ./components/unvisited */ "./resources/js/components/unv
 
 __webpack_require__(/*! ./components/allGuest */ "./resources/js/components/allGuest.js");
 
+__webpack_require__(/*! ./components/scoring */ "./resources/js/components/scoring.js");
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -57103,8 +57105,14 @@ try {
 /*!************************************************!*\
   !*** ./resources/js/components/gameCounter.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
 
 try {
   var getCounterState = function getCounterState() {
@@ -57122,6 +57130,38 @@ try {
     }
 
     countDisplay();
+    insertRequest(counter);
+  };
+
+  var insertRequest = function insertRequest(score) {
+    var nama = document.getElementById('nama').value;
+    var hp = document.getElementById('hp').value;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('/api/insertScore', {
+      nama: nama,
+      hp: hp,
+      score: score
+    }).then(function () {})["catch"](function (error) {
+      console.log(error.response.data);
+    });
+    /*
+    const formData = new FormData();
+    formData.append('nama', namaSes.value);
+    formData.append('hp', hpSes.value);
+    formData.append('score', score);
+    	
+    const xmlHttp = new XMLHttpRequest();
+           xmlHttp.onreadystatechange = function()
+           {
+               if(xmlHttp.readyState == 4 && xmlHttp.status == 200)
+               {
+                   console.log(xmlHttp.responseText);
+               }
+           }
+    	xmlHttp.open("POST", "/insertScore");
+    	xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    	xmlHttp.setRequestHeader('X-CSRF-Token', token);
+    	xmlHttp.send(formData); 	
+    	*/
   };
 
   var countDisplay = function countDisplay() {
@@ -57483,6 +57523,73 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     });
   });
 });
+
+/***/ }),
+
+/***/ "./resources/js/components/scoring.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/scoring.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+try {
+  $(document).ready(function () {
+    var score = $("#scoreGame").DataTable({
+      autoWidth: true,
+      order: [[2, "desc"] //column 2 is score, 1 is hp, 0 is nama
+      ],
+      responsive: true,
+      columnDefs: [{
+        responsivePriority: 1,
+        targets: 0
+      }, {
+        responsivePriority: 2,
+        targets: -1
+      }, {
+        className: 'text-center',
+        targets: "_all"
+      }],
+      ajax: {
+        type: 'get',
+        url: '/api/score',
+        dataType: 'json',
+        dataSrc: ''
+      },
+      columns: [{
+        data: "nama"
+      }, {
+        data: "hp"
+      }, {
+        data: "score"
+      }],
+      sDom: '<"clear">',
+      //hide searchbox and paginate info
+      info: false,
+      language: {
+        sEmptyTable: "Tidak ada data",
+        sProcessing: "Sedang memproses...",
+        sLengthMenu: "Tampil _MENU_ Game Score",
+        sZeroRecords: "Tidak ditemukan Game Score",
+        sInfo: "Menampilkan _START_ sampai _END_ dari _TOTAL_ Game Score",
+        sInfoEmpty: "Menampilkan 0 sampai 0 dari 0 Score",
+        sInfoFiltered: "(disaring dari _MAX_ Data Game Score keseluruhan)",
+        sInfoPostFix: "",
+        sSearch: "Cari:",
+        sUrl: "",
+        oPaginate: {
+          sFirst: "<<",
+          sPrevious: "<",
+          sNext: ">",
+          sLast: ">>"
+        }
+      }
+    });
+    setInterval(function () {
+      score.ajax.reload();
+    }, 500);
+  });
+} catch (_unused) {}
 
 /***/ }),
 

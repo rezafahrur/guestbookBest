@@ -47,7 +47,11 @@
         <div id="button"></div>
     </div>
         
-        
+    <form action="#" method="post">
+            @csrf
+            <input type="hidden" class="gameCount" name="nama" id="nama" value="{{ Session::get('nama') }}">
+          <input type="hidden" class="gameCount" name="hp" id="hp" value="{{ Session::get('hp') }}">
+          </form>
     
 <script src="{{ asset('js/app.js') }}"></script>
 </body>

@@ -59,7 +59,7 @@
   <div class="plus plus-center plus3"></div>
   <div class="plus plus-center plus4"></div>
   <div class="center-square"></div>
-  <div class="top-text first-text"><div class="this">BEST&nbsp;</div> <div class="is">DIGITAL&nbsp;</div> <div class="my">ON PROGRESS</div></div>
+  <div class="top-text first-text"><div class="this">BeSt&nbsp;</div> <div class="is">DIGITAL&nbsp;</div> <div class="my">ON PROGRESS</div></div>
   <div class="bottom-text first-text"><div class="this">7th&nbsp;</div> <div class="is">ANNIVERSARY&nbsp;</div> <div class="my">BeSt</div></div>
   <!--third elements-->
   <div class="projects">
@@ -72,6 +72,5 @@
     </div>
   </div>
 </div>
-    
 </body>
 </html>

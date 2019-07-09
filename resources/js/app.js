@@ -11,3 +11,4 @@ require('./components/welcome');
 require('./components/visited');
 require('./components/unvisited');
 require('./components/allGuest');
+require('./components/scoring');
