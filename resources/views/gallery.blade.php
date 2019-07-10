@@ -51,6 +51,13 @@
 		<img src="{{ asset('images/tables/1/cat.jpg')}}" type="thumbnail" alt=""></a>
 		<a href="gallerydetail">
 		<img src="{{ asset('images/tables/1/cat2.jpg')}}" type="thumbnail" alt=""></a>
+		<br>
+		<center>
+		<h2>BeSt Gallery Photos</h2>
+		<ul>
+			<li><a class="downloads back" href="home">Back</a></li> 
+		</ul>
+		</center>
 	</div>
 	<script src="{{asset('js/app.js')}}"></script>
 </body>

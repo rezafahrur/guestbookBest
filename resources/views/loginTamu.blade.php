@@ -35,7 +35,7 @@
             <h2 class="animation a1">Halo Lagi...  <span class="animation a3"> <i class="far fa-smile"></i></span> </h2>
             <h4 class="animation a5">Silahkan Login untuk Berinteraksi dengan Kami selama berjalannya acara ini</h4>
           </div>
-          <form action="login" method="post">
+          <form action="login" method="post" autocomplete="off">
               @csrf
           <div class="form">
             <input type="number" name="hp" class="form-field animation a3" placeholder="Masukkan Nomor HP Anda" required>

@@ -57566,6 +57566,9 @@ try {
       sDom: '<"clear">',
       //hide searchbox and paginate info
       info: false,
+      colReorder: {
+        realtime: true
+      },
       language: {
         sEmptyTable: "Tidak ada data",
         sProcessing: "Sedang memproses...",
@@ -57587,7 +57590,7 @@ try {
     });
     setInterval(function () {
       score.ajax.reload();
-    }, 500);
+    }, 2000);
   });
 } catch (_unused) {}
 

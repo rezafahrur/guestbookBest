@@ -47,7 +47,7 @@
         </div>
         
         <div class="counter-text">
-          30
+          60
         </div>
       </div>
       <div class="inspired">

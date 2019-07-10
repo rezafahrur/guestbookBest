@@ -91,5 +91,31 @@ class AppController extends Controller
         
     }
 
+    public function pickTable()
+    {
+        if(!Session::get('authorize'))
+        {
+            return redirect()->route('login');
+        }
+        else 
+        {
+            return view('tables');
+        }
+    }
+
+    public function showGallery(Request $request)
+    {
+        if(!Session::get('authoize'))
+        {
+            return redirect()->route('login');
+        }
+        else 
+        {
+            
+            return view('gallery');
+        }
+    }
+
+
     
 }

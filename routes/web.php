@@ -19,21 +19,10 @@ Route::get('/guest', function () {
     return view('guestbook');
 });
 
-Route::get('/tables', function () {
-    return view('tables');
-});
-
 Route::get('/counter', function () {
     return view('counter');
 });
 
-Route::get('/gallery', function () {
-    return view('gallery');
-});
-
-Route::get('/gallerydetail', function () {
-    return view('gallery-detail');
-});
 
 Route::get('/visited', 'GuestController@visited')->name('visited');
 Route::get('/unvisited', 'GuestController@unvisited')->name('unvisited');
@@ -56,3 +45,9 @@ Route::get('/game', 'AppController@game')->name('game');
 
 Route::get('/displayScore', 'AppController@displayScore')->name('displayScore');
 Route::get('/score', 'AppController@score');
+
+Route::get('/tables', 'AppController@pickTable');
+Route::post('/gallery', 'AppController@showGallery');
+Route::get('/gallerydetail', function () {
+    return view('gallery-detail');
+});
