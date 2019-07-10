@@ -105,7 +105,7 @@ class AppController extends Controller
 
     public function showGallery(Request $request)
     {
-        if(!Session::get('authoize'))
+        if(!Session::get('authorize'))
         {
             return redirect()->route('login');
         }
