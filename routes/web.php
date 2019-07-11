@@ -48,6 +48,7 @@ Route::get('/score', 'AppController@score');
 
 Route::get('/tables', 'AppController@pickTable');
 Route::post('/gallery', 'AppController@showGallery');
-Route::get('/gallerydetail', function () {
-    return view('gallery-detail');
-});
+Route::get('/gallerydetail/{table}/{photo}', 'AppController@galleryDetail')->name('galleryDetail');
+
+Route::get('/cake', 'AppController@cake')->name('cake');
+Route::get('/anniversary', 'AppController@anniversary')->name('anniversary');

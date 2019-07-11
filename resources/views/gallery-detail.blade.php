@@ -43,12 +43,11 @@
 		<p class="center">"BeSt Digital on Progress"</p> 
     
 	<div class="gallery">	
-		<img src="{{ asset('images/tables/1/book-lamps.jpg')}}" type="thumbnail" alt="">
+		<img src="{{ asset('images/tables/'.$table .'/'. $photo)}}" type="thumbnail" alt="">
 		<h2>Download Photos</h2>
 		<ul>
-			<li><a class="downloads coffe" href="#">Print in Coffe Printer</a></li>
-            <li><a class="downloads jpg" href="#">Download as JPG</a></li>
-			<li><a class="downloads back" href="home">Back</a></li> 
+		<li><a class="downloads jpg" href="{{ asset('images/tables/'.$table .'/'. $photo)}}" download="{{$photo}}">Download as JPG</a></li>
+			<li><a class="downloads back" href="/home">Back</a></li> 
 		</ul>
 	</div>
 	<script src="{{asset('js/app.js')}}"></script>

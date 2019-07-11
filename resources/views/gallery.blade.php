@@ -43,21 +43,33 @@
 		<p class="center">"BeSt Digital on Progress"</p> 
     
 	<div class="gallery">	
-		<a href="gallerydetail">
-		<img src="{{ asset('images/tables/1/book-lamps.jpg')}}" type="thumbnail" alt=""></a>
-		<a href="gallerydetail">
-		<img src="{{ asset('images/tables/1/ceiling-lamp.jpg')}}" type="thumbnail" alt=""></a>
-		<a href="gallerydetail">
-		<img src="{{ asset('images/tables/1/cat.jpg')}}" type="thumbnail" alt=""></a>
-		<a href="gallerydetail">
-		<img src="{{ asset('images/tables/1/cat2.jpg')}}" type="thumbnail" alt=""></a>
+		@if (empty($fileNames))
+		<a href="gallerydetail/mitra-best.jpg">
+				<img src="{{ asset('images/mitra-best.jpg')}}" type="thumbnail" alt="">
+		</a>
 		<br>
 		<center>
-		<h2>BeSt Gallery Photos</h2>
+		<h2>Foto Belum Tersedia di Meja {{$table}} <br> Silahkan Kembali Lagi Nanti</h2>
+		</center>
+		@else
+			@foreach ($fileNames as $fileName)	
+			<a href="gallerydetail/{{$table}}/{{$fileName}}">
+				<img src="{{ asset('images/tables/'.$table .'/'. $fileName)}}" type="thumbnail" alt="">
+			</a>
+			@endforeach
+			<br>
+		<center>
+			@if ($table != "photoBoot")
+			<h2>BeSt Gallery Photos <br> Meja {{$table}}</h2>		
+			@else
+			<h2>BeSt Gallery Photos <br> Photo Booth</h2>		
+			@endif
+		
 		<ul>
 			<li><a class="downloads back" href="home">Back</a></li> 
 		</ul>
 		</center>
+		@endif
 	</div>
 	<script src="{{asset('js/app.js')}}"></script>
 </body>

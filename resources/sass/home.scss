@@ -661,7 +661,7 @@ body {
 }
 
 .row {
-    height: 33.3%;
+    height: 50%;
 }
 
 .row-first {
@@ -674,12 +674,6 @@ body {
     opacity: 0;
     animation: animation17 1s ease forwards;
     animation-delay: 4.3s;
-}
-
-.row-third {
-  opacity: 0;
-  animation: animation17 1s ease forwards;
-  animation-delay: 4.3s;
 }
 
 .row .project {
@@ -769,12 +763,6 @@ body {
     background-position: center;
 }
 
-
-.cake {
-    background-image: url("/images/coffee.jpg");
-    background-position: center;
-}
-
 .game {
   background-image: url("/images/game.jpg");
   background-position: top;
@@ -789,14 +777,6 @@ body {
     text-shadow: 2px 2px rgba(0, 0, 0, .7);
 }
 
-
-.cake:after {
-    content: "Anniversary Cake";
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    text-shadow: 2px 2px rgba(0, 0, 0, .7);
-}
 
 .game:after {
   content: "Game";

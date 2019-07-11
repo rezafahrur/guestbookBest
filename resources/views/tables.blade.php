@@ -34,8 +34,9 @@
    <center class="tables">
        <form action="gallery" method="post">
         @csrf
-        <select id="tables" name="tables" class="form-control selectpicker" data-live-search="true" onchange='this.form.submit()' required>
+        <select id="tables" name="table" class="form-control selectpicker" data-live-search="true" onchange='this.form.submit()' required>
                 <option disabled selected value="">PILIH NOMOR MEJA</option>
+                <option value="photoBoot">Photo Boot</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

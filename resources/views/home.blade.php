@@ -66,9 +66,7 @@
     <div class="row row-first">
       <a href="tables"><div class="project photo"></div></a>
     </div>
-    <div class="row row-second"><a href="#"><div class="project cake"></div></a>
-    </div>
-    <div class="row row-third"><a href="game"><div class="project game"></div></a>
+    <div class="row row-second"><a href="game"><div class="project game"></div></a>
     </div>
   </div>
 </div>

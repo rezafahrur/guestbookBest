@@ -12,6 +12,8 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/components/anniversary.js', 'public/js')
+    .js('resources/js/components/cake.js', 'public/js')
     .less('resources/sass/counter.less', 'public/css')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/form.scss', 'public/css')
@@ -20,4 +22,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/home.scss', 'public/css')
     .sass('resources/sass/tables.scss', 'public/css')
     .sass('resources/sass/visited.scss', 'public/css')
+    .sass('resources/sass/cake.scss', 'public/css')
+    .sass('resources/sass/anniversary.scss', 'public/css')
     .sass('resources/sass/gallery.scss', 'public/css');

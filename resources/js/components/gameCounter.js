@@ -5,7 +5,7 @@ try{
 const countBtn = document.getElementById('button');
 const countDisp = document.getElementById('counter');
 
-localStorage.clear();
+//localStorage.clear();
 
 let counter = 0;
 
@@ -40,6 +40,11 @@ function insertRequest(score)
 		console.log(error.response.data)
 	});
 
+	if(score === 500)
+	{
+		window.location.href = "/cake";
+	}
+
 	/*
 	const formData = new FormData();
 	formData.append('nama', namaSes.value);
@@ -63,7 +68,15 @@ function insertRequest(score)
 }
 
 function countDisplay() {
-    countDisp.innerHTML = counter;
+	if(counter === 500)
+	{
+		window.location.href = "/anniversary";
+	}
+	else 
+	{
+		countDisp.innerHTML = counter;
+	}
+    
 }
 
 window.addEventListener('load', getCounterState);

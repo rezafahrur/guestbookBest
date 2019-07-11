@@ -8,6 +8,7 @@ use App\Guest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class AppController extends Controller
 {
@@ -111,9 +112,36 @@ class AppController extends Controller
         }
         else 
         {
+            $imagesArray =File::allFiles('images/tables/'. $request->table);
+            $fileNameArray = [];
+            foreach($imagesArray as $image)
+            {
+                $fileNameArray[] = $image->getFilename();
+            }
             
-            return view('gallery');
+            return view('gallery',[
+                'fileNames' => $fileNameArray,
+                'table'=> $request->table
+            ]);
         }
+    }
+
+    public function galleryDetail($table, $photo)
+    {
+        return view('gallery-detail', [
+            'table' => $table,
+            'photo' => $photo
+        ]);
+    }
+
+    public function cake()
+    {
+        return view('cake');
+    }
+
+    public function anniversary()
+    {
+        return view('anniversary');
     }
 
 
